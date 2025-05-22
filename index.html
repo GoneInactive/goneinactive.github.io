@@ -1,7 +1,100 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Watts - CU Quants</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      color: #2e2e2e;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+
+    .headshot {
+      float: right;
+      margin-left: 30px;
+      border-radius: 12px;
+      max-width: 180px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0f172a;
+      font-size: 1.75rem;
+      margin-top: 40px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>Ryan Watts</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="papers.html">Papers</a>
+    </nav>
+  </header>
+  <main>
+    <img src="headshot.jpg" alt="Headshot" class="headshot">
+    <section>
+      <h2>Welcome</h2>
+      <p>I’m Ryan Watts, President of CU Quants at the University of Colorado Boulder. This site showcases my work in quantitative finance, software, and research. I specialize in algorithmic trading, data science, and software engineering.</p>
+    </section>
+    <section>
+      <h2>About Me</h2>
+      <p>Insert a short bio here, outlining your academic background, career goals, or professional interests. You can also include extracurriculars, awards, and other highlights.</p>
+    </section>
+  </main>
 </body>
 </html>
