@@ -1,39 +1,211 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Papers - Ryan Watts</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #1e1e2f; padding: 20px; color: white; text-align: center; }
-    nav a { margin: 0 15px; color: #ccc; text-decoration: none; }
-    nav a:hover { color: white; }
-    main { max-width: 900px; margin: auto; padding: 40px 20px; background: white; }
-    .paper { margin-bottom: 20px; }
-    h1, h2 { color: #1e1e2f; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse the same CSS from index.html */
+        /* Add these additional styles for the publications page */
+        
+        .publications-container {
+            margin-top: 2rem;
+        }
+        
+        .publication {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .publication:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-title {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .publication-authors {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-venue {
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .publication-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .publication-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .publication-links a:hover {
+            color: var(--accent);
+        }
+        
+        .publication-abstract {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .abstract-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 500;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .publication-header {
+                flex-direction: column;
+            }
+            
+            .publication-date {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Research Papers</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="papers.html">Papers</a>
-    </nav>
-  </header>
-  <main>
-    <section id="papers-list">
-      <div class="paper">
-        <h2>Paper Title</h2>
-        <p>Abstract or summary of the paper. Include research questions, methods, findings, and any publication info or download links.</p>
-      </div>
-      <div class="paper">
-        <h2>Paper Title</h2>
-        <p>Abstract or summary of the paper. Include research questions, methods, findings, and any publication info or download links.</p>
-      </div>
-    </section>
-  </main>
+    <header>
+        <div class="header-content">
+            <h1>Publications & Papers</h1>
+            <p class="tagline">Academic research and scholarly work</p>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <section class="publications-section">
+            <h2>Research Publications</h2>
+            <div class="publications-container">
+                <div class="publication">
+                    <div class="publication-header">
+                        <div>
+                            <h3 class="publication-title">Title of Your First Publication</h3>
+                            <p class="publication-authors">Your Name, Co-author 1, Co-author 2</p>
+                            <p class="publication-venue">Journal/Conference Name</p>
+                        </div>
+                        <p class="publication-date">Month Year</p>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>
+                            Brief abstract or description of the publication. You can include 
+                            the key findings, methodologies used, and the significance 
+                            of the work.
+                        </p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-file-pdf"></i> Full Paper</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> DOI Link</a>
+                        <a href="#"><i class="fas fa-code"></i> Supplementary Materials</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-header">
+                        <div>
+                            <h3 class="publication-title">Title of Your Second Publication</h3>
+                            <p class="publication-authors">Your Name, Co-author 1</p>
+                            <p class="publication-venue">Conference Proceedings</p>
+                        </div>
+                        <p class="publication-date">Month Year</p>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>
+                            Another abstract highlighting different research work. 
+                            Focus on the academic contributions and any awards 
+                            or recognition received.
+                        </p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-file-pdf"></i> Full Paper</a>
+                        <a href="#"><i class="fab fa-github"></i> Code Repository</a>
+                    </div>
+                </div>
+                
+                <!-- Add more publications as needed -->
+            </div>
+        </section>
+        
+        <section class="publications-section">
+            <h2>Academic Papers & Theses</h2>
+            <div class="publications-container">
+                <div class="publication">
+                    <div class="publication-header">
+                        <div>
+                            <h3 class="publication-title">Undergraduate Thesis Title</h3>
+                            <p class="publication-authors">Your Name</p>
+                            <p class="publication-venue">[Your University Name]</p>
+                        </div>
+                        <p class="publication-date">Month Year</p>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>
+                            Summary of your thesis work, including your research question, 
+                            methodology, and key conclusions. Highlight any awards or 
+                            distinctions received.
+                        </p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-file-pdf"></i> Thesis PDF</a>
+                        <a href="#"><i class="fas fa-video"></i> Defense Presentation</a>
+                    </div>
+                </div>
+                
+                <!-- Add more academic papers as needed -->
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="publications.html">Publications</a>
+                <a href="#">Contact</a>
+            </nav>
+            <p class="copyright">© 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
