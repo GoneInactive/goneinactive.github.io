@@ -3,101 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Projects</title>
+    <title>Ryan Watts | Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Reuse the same CSS from index.html */
-        /* Add these additional styles for the projects page */
-        
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-        
-        .project-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-description {
-            margin-bottom: 1.5rem;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tag {
-            background-color: var(--light);
-            color: var(--secondary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .project-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .project-links a:hover {
-            color: var(--accent);
-        }
-        
-        @media (max-width: 768px) {
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Ryan Watts</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="papers.html">Papers</a>
+                <a href="mailto:watts.ryan03@gmail.com">Contact</a>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <header class="page-header">
         <div class="header-content">
             <h1>My Projects</h1>
             <p class="tagline">Explore my work and creations</p>
@@ -109,81 +35,72 @@
             <h2>Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1" class="project-image">
+                    <img src="tradebyte.png" alt="TradeByte" class="project-image" style="width: 100%; height: auto; object-fit: contain;">
                     <div class="project-content">
-                        <h3 class="project-title">Project Title 1</h3>
-                        <p class="project-date">Month Year - Present</p>
+                        <h3 class="project-title">TradeByte</h3>
+                        <p class="project-date">February 2025 - Present</p>
                         <p class="project-description">
-                            A brief description of the project, what it does, 
-                            the technologies used, and your role in the project.
+                          TradeByte is a modular crypto trading bot platform, designed to help traders implement algo strategies and analyze markets.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Rust</span>
                             <span class="tag">Data Analysis</span>
+                            <span class="tag">Quantitative Trading</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/GoneInactive/Trade-Byte"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2" class="project-image">
                     <div class="project-content">
-                        <h3 class="project-title">Project Title 2</h3>
-                        <p class="project-date">Month Year - Month Year</p>
+                        <h3 class="project-title">EURQ/USD Market Making</h3>
+                        <p class="project-date">May 2025 - Present</p>
                         <p class="project-description">
-                            Another project description highlighting different 
-                            skills and accomplishments.
+                              Using TradeByte, I've analyzed illiquidate crypto pairs and implemented a market making strategy. Specifically, I've been using the EURQ/USD pair, which is a stablecoin pegged to the Euro. 
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Web Development</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">React</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title 3</h3>
-                        <p class="project-date">Month Year</p>
-                        <p class="project-description">
-                            A third project that shows diversity in your skills 
-                            and academic interests.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Data Visualization</span>
-                            <span class="tag">R</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Quantitative Trading</span>
+                            <span class="tag">Market Making</span>
                         </div>
                         <div class="project-links">
                             <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="#"><i class="fas fa-chart-line"></i> Results</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Add more project cards as needed -->
+
+                <div class="project-card">
+                  <div class="project-content">
+                      <h3 class="project-title">Crumb Catcher</h3>
+                      <p class="project-date">November 2020 - Present</p>
+                      <p class="project-description">
+                            Option market maker for illiquid options on the S&P 500. 
+                      </p>
+                      <div class="project-tags">
+                          <span class="tag">Python</span>
+                          <span class="tag">Quantitative Trading</span>
+                          <span class="tag">Market Making</span>
+                      </div>
+                      <div class="project-links">
+                          <a href="#"><i class="fab fa-github"></i> Code</a>
+                          <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
+                      </div>
+                  </div>
+              </div>
+
             </div>
         </section>
     </div>
     
     <footer>
         <div class="footer-content">
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="publications.html">Publications</a>
-                <a href="#">Contact</a>
-            </nav>
-            <p class="copyright">© 2023 Your Name. All rights reserved.</p>
+            <p class="copyright">© 2025 Ryan Watts. All rights reserved.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
